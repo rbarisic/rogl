@@ -1,0 +1,1273 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"create",
+				"create_entity"
+			],
+			[
+				"draw",
+				"draw_quad"
+			],
+			[
+				"succes",
+				"succesSend"
+			],
+			[
+				"wind",
+				"window-white"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"button",
+				"button-xlarge"
+			],
+			[
+				"butto",
+				"button-fixed-width"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-repeat"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"bak",
+				"background-repeat"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"inn",
+				"inline-block"
+			],
+			[
+				"prio",
+				"price_per_rough_oridecon"
+			],
+			[
+				"price_",
+				"price_rough_oridecon"
+			],
+			[
+				"price",
+				"price_rough_oridecon"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"a",
+				"AddToElementById"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"er",
+				"ergebnisBox"
+			],
+			[
+				"ver",
+				"versicherungMonatlich"
+			],
+			[
+				"verbra",
+				"verbrauchAufHundertKilometer"
+			],
+			[
+				"spri",
+				"spritKosten"
+			],
+			[
+				"kilometer",
+				"kilometerProJahr"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"div_star",
+				"div_tag_start_flag"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"background-o",
+				"background-position"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"Hard",
+				"Hardware-Reselling"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"tabl",
+				"table-column"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"f",
+				"f.	f.check_box (ffcb)"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"cell",
+				"cellspacing	Attr"
+			],
+			[
+				"backgroun",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lib/events.rb",
+			"settings":
+			{
+				"buffer_size": 573,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/event.rb",
+			"settings":
+			{
+				"buffer_size": 253,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/window.rb",
+			"settings":
+			{
+				"buffer_size": 1502,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/SASS Build/SASS - Compressed.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				],
+				[
+					"Packages/User/scss_subfolder.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS - Compressed.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "clos",
+		"selected_items":
+		[
+			[
+				"clos",
+				"Project: Close"
+			],
+			[
+				"projsa",
+				"Project: Save As"
+			],
+			[
+				"ad",
+				"Project: Add Folder"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"cl",
+				"Project: Close"
+			],
+			[
+				"projcl",
+				"Project: Close"
+			],
+			[
+				"projec",
+				"Project: Close"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"build",
+				"Build: New Build System"
+			],
+			[
+				"inpackage",
+				"Package Control: Install Package"
+			],
+			[
+				"proj",
+				"Project: Save As"
+			],
+			[
+				"add f",
+				"Project: Add Folder"
+			],
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"package ",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"help",
+			"ls",
+			"runner.rb",
+			"ruby",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/github/games/3d",
+		"/C/github/games/3d/assets",
+		"/C/github/games/3d/assets/entities",
+		"/C/github/games/3d/lib"
+	],
+	"file_history":
+	[
+		"/C/github/games/3d/engine.rb",
+		"/C/github/games/3d/lib/event_queue.rb",
+		"/C/github/games/3d/lib/entities.rb",
+		"/C/github/games/3d/lib/file_handling.rb",
+		"/C/github/games/3d/assets/entities/player.rb",
+		"/C/github/games/3d/3d.rb",
+		"/C/github/games/3d/lib/3d.rb",
+		"/C/github/games/3d/Gemfile",
+		"/C/RailsInstaller/Ruby2.0.0/bin/irb.bat",
+		"/C/github/games/3d/assets/settings.rb",
+		"/C/github/household/household_server/app/controllers/users_controller.rb",
+		"/C/github/household/household_client/app/index.html",
+		"/C/github/household/household_server/app/views/users/index.json.erb",
+		"/C/github/household/household_server/app/views/users/create.js.erb",
+		"/C/github/household/household_server/app/views/users/create.json.erb",
+		"/C/github/household/household_server/app/controllers/application_controller.rb",
+		"/C/github/household/household_server/app/views/layouts/application.json.html",
+		"/C/github/household/household_server/config/application.rb",
+		"/C/github/household/household_server/app/views/users/new.json.erb",
+		"/C/github/household/household_server/app/assets/javascripts/application.js",
+		"/C/github/household/household_client/app/lib/jquery.1.11.2.min.js",
+		"/C/github/household/household_server/Gemfile",
+		"/C/github/household/household_server/config.ru",
+		"/C/github/household/household_server/config/environments/production.rb",
+		"/C/github/household/household_server/config/routes.rb",
+		"/C/github/household/household_client/app/assets/stylesheets/main.scss",
+		"/C/Users/xiq/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/github/household/household_client/app/assets/stylesheets/main.css",
+		"/C/bitbucket/new-invitation-css/assets/js/invitd.js",
+		"/C/bitbucket/new-invitation-css/assets/css/invitation.css",
+		"/C/bitbucket/new-invitation-css/assets/php/phpscripts.php",
+		"/C/bitbucket/new-invitation-css/index.php",
+		"/C/bitbucket/new-invitation-css/mockdata.md",
+		"/C/bitbucket/new-invitation-css/assets/js/pagetransitions.js",
+		"/C/bitbucket/new-invitation-css/rsvp.php",
+		"/C/bitbucket/new-invitation-css/iframe.php",
+		"/C/bitbucket/new-invitation-css/assets/php/sendresponse.php",
+		"/C/bitbucket/website/Invitd-Dateien/pagetransitions.js",
+		"/C/bitbucket/website/first_page/Invitd.htm",
+		"/C/bitbucket/new-invitation-css/ifelse.php",
+		"/C/bitbucket/website/first_page/assets/css/invitation.css",
+		"/C/bitbucket/new-invitation-css/todo.md",
+		"/C/bitbucket/new-invitation-css-notes/ids.md",
+		"/C/bitbucket/website/first_page/assets/css/mobile.css",
+		"/C/bitbucket/website/first_page/Invitd-Dateien/component.css",
+		"/C/bitbucket/website/first_page/assets/download.jpg",
+		"/C/bitbucket/testtttt/index.php",
+		"/C/bitbucket/testtttt/index.html",
+		"/C/Users/xiq/.ssh/id_rsa.pub",
+		"/C/bitbucket/new-invitation-css/changes.md",
+		"/C/bitbucket/website/Invitd-Dateien/jquery_002.js",
+		"/C/bitbucket/website/first_page/Invitd-Dateien/jquery.js",
+		"/C/bitbucket/new-invitation-css/test.php",
+		"/C/php/php.ini",
+		"/C/bitbucket/website/Invitd.htm",
+		"/C/php/php.ini-development",
+		"/C/php/php.ini-production",
+		"/C/bitbucket/new-invitation-css/index.html",
+		"/C/bitbucket/new-invitation-css/README.md",
+		"/C/github/hex_colors/_slider.scss",
+		"/C/github/hex_colors/colors.scss",
+		"/C/github/hex_colors/widget/rgba.php",
+		"/C/github/hex_colors/index.php",
+		"/C/github/hex_colors/colors.js",
+		"/C/github/hex_colors/css/colors.css",
+		"/C/github/hex_colors/_pure-grid-sizes.scss",
+		"/C/github/hex_colors/lib/pure-grid.lib",
+		"/C/Users/xiq/AppData/Roaming/Sublime Text 3/Packages/User/scss_subfolder.sublime-build",
+		"/C/github/hex_colors/colors.css",
+		"/C/Users/xiq/AppData/Roaming/Sublime Text 3/Installed Packages/SASS Build.sublime-package",
+		"/C/Users/xiq/Desktop/Web/mobile/index.html",
+		"/C/Users/xiq/Desktop/Web/mobile/js/app.js",
+		"/C/Users/xiq/Desktop/Web/mobile/mobile.css",
+		"/C/github/emulator_ruby/interpreter.rb",
+		"/C/github/emulator_ruby/rbasic.rb",
+		"/C/github/emulator_ruby/test.rb",
+		"/C/github/game_codes/db/migrate/20150120124115_add_company_url_to_game.rb",
+		"/C/github/game_codes/db/schema.rb",
+		"/C/Users/xiq/.ssh/keyman",
+		"/C/Users/xiq/.ssh/id_rsa",
+		"/C/github/game_codes/config/database.yml",
+		"/C/github/game_codes/app/views/games/_index_gallery.html.erb",
+		"/C/github/game_codes/app/helpers/application_helper.rb",
+		"/C/github/game_codes/app/views/game_requests/_game_request.html.erb",
+		"/C/github/game_codes/app/views/game_requests/new.html.erb",
+		"/C/github/game_codes/app/models/game_request.rb",
+		"/C/github/game_codes/app/controllers/game_requests_controller.rb",
+		"/C/github/game_codes/app/views/game_requests/check_game_request.js.erb",
+		"/C/github/game_codes/app/models/game.rb",
+		"/C/github/game_codes/app/models/user.rb",
+		"/C/github/game_codes/game_codes.komodoproject",
+		"/C/github/game_codes/game.sublime-project",
+		"/C/github/game_codes/Gemfile",
+		"/C/github/game_codes/db/migrate/20150121131902_add_code_length_to_game.rb",
+		"/C/github/game_codes/app/models/game_code.rb",
+		"/C/github/game_codes/config/initializers/mime_types.rb",
+		"/C/github/game_codes/db/migrate/20150119140948_remove_user_id_from_games.rb",
+		"/C/github/game_codes/app/views/widgets/_newest_users.html.erb",
+		"/C/github/game_codes/app/controllers/users_controller.rb",
+		"/C/github/game_codes/app/views/game_requests/index.html.erb",
+		"/C/github/game_codes/app/assets/javascripts/games.js.coffee",
+		"/C/github/game_codes/app/assets/javascripts/application.js",
+		"/C/github/game_codes/app/views/games/_index_listview.html.erb",
+		"/C/github/game_codes/config/initializers/filter_parameter_logging.rb",
+		"/C/github/game_codes/app/views/shared/_gallery_selector.html.erb",
+		"/C/github/game_codes/app/views/layouts/application.html.erb",
+		"/C/github/game_codes/app/views/welcome/index.html.erb",
+		"/C/github/game_codes/app/views/welcome/imprint.html.erb",
+		"/C/github/game_codes/app/controllers/welcome_controller.rb",
+		"/C/github/game_codes/app/controllers/games_controller.rb",
+		"/C/github/game_codes/config/routes.rb",
+		"/C/github/game_codes/app/views/games/index.html.erb",
+		"/C/github/game_codes/app/views/shared/_admin_warning_collapsed.html.erb",
+		"/C/github/game_codes/app/views/shared/_admin_warning.html.erb",
+		"/C/github/game_codes/db/migrate/20150119093853_add_devise_to_users.rb",
+		"/C/github/game_codes/app/views/game_codes/new.html.erb",
+		"/C/github/game_codes/config/initializers/inflections.rb",
+		"/C/github/game_codes/readme.md",
+		"/C/xampp/htdocs/bih-consulting/lib/bih-framework.lib.php",
+		"/C/xampp/htdocs/bih-consulting/views/about.html.php",
+		"/C/xampp/htdocs/bih-consulting/assets/stylesheets/bih-stylesheet.css",
+		"/C/xampp/htdocs/bih-consulting/index.php",
+		"/C/xampp/htdocs/bih-consulting/components/head.dat.php",
+		"/C/xampp/htdocs/bih-consulting/about.php",
+		"/C/xampp/htdocs/bih-consulting/views/home.html.php",
+		"/C/xampp/htdocs/bih-consulting/bower_components/purecss/tasks/bower_install.js",
+		"/C/xampp/htdocs/bih-consulting/bower.json",
+		"/C/xampp/htdocs/bih-consulting/bower_components/jquery/src/css.js"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"6.0",
+			"rand(20)",
+			"50.0",
+			"2.0",
+			"y",
+			"(200)",
+			",",
+			"                        ",
+			",",
+			"Entity",
+			",",
+			"1",
+			"File",
+			"file",
+			"/localhost:3000/users.",
+			"http://localhost:3000/users.json",
+			"json",
+			"contentType : 'application/json',",
+			"success:",
+			"dataType: \"json\",",
+			"name",
+			"static_assets",
+			"serve",
+			"jquery",
+			"rotect_from_forgery",
+			"bbb",
+			"input[type=\"button\"]",
+			"input[type=\"button\"].dropdown",
+			"d",
+			"input[type=\"button\"].dropdown",
+			"value=\"Hello\">",
+			"input ",
+			"input",
+			"class=\"dropdown\"",
+			" type=\"button\" ",
+			"yourName",
+			"l-box-12em",
+			"calendar",
+			"href=\"#\" onClick=\"boo(",
+			"img",
+			"0,0,0",
+			"id",
+			"google-map",
+			"filter: blur(2px);",
+			"-webkit-filter: blur(2px);",
+			"moz-filter",
+			"stdDeviation=\"1\"",
+			"blur(7px)",
+			"stdDeviation",
+			"blur(10px)",
+			"adjustMargin();",
+			"rsvp",
+			"You\\'re a",
+			"adjustMargin();",
+			"adjustMargin()",
+			"adjustMargin();",
+			"rsvp",
+			"	bottom: 0;",
+			"rsvp",
+			"#rsvp {",
+			"<h2>",
+			"with 3",
+			"h2",
+			"is-middle",
+			"button-fw-1",
+			"is-middle",
+			"</p>",
+			"<h2>RSVP</h2>",
+			"reload",
+			"rsv",
+			"$(\"#rsvp\")",
+			"visibility",
+			"rsvp",
+			"status",
+			"showrsvp1()",
+			"showrsvp1();",
+			"stdDeviation=\"10",
+			"blur(10px",
+			"iframe",
+			"id=\"showInvite\"",
+			"homepage",
+			"event_name",
+			"url(",
+			"::before",
+			"button-fixed-width",
+			" button-fixed-width ",
+			"display:none",
+			"rsvp",
+			"block",
+			"class=\"button-xlarge button-fixed-width pure-button-primary\"",
+			"&nbsp;&nbsp;&nbsp;",
+			"2",
+			"bottom",
+			"10%",
+			"rsvp",
+			"window-",
+			"id=\"#rsvp\"",
+			"id=\"#rsvp'",
+			"rsvp",
+			"more inform",
+			"more",
+			"xlarge",
+			"align",
+			"height: 12em; ",
+			"rsvp1",
+			"button-xlarge",
+			"pure-button button-xlarge button-success is-middle",
+			"style=\"width: 40%; max-width: 200px;\"",
+			"button-success is-middle",
+			"style=\"width: 40%; max-width: 200px;\" ",
+			"rsv",
+			"updatersvp()",
+			"white",
+			"not",
+			"more infor",
+			"h2",
+			"h1",
+			"span",
+			"p>",
+			"p",
+			"md",
+			"reload()",
+			"#rsvp",
+			"click",
+			"open",
+			"height",
+			"110",
+			"showrsvp1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"button-fw-1",
+			"",
+			"<?php",
+			";\n",
+			";\\n",
+			".pure-form.pure-form-full",
+			"#footer",
+			"u-sm",
+			"-u-md",
+			"u-sm",
+			"u-sd",
+			"verbrauchAufHundertKilometer",
+			"return ",
+			"window",
+			"",
+			"\\n",
+			"xrlabs",
+			"h1",
+			"<br>",
+			"",
+			"<li>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lib/events.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 573,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2,
+								573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/event.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/window.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								904,
+								904
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 443.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 456.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "3d.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"window",
+				"lib\\window.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"usercontr",
+				"household_server\\app\\controllers\\users_controller.rb"
+			],
+			[
+				"indexjson",
+				"household_server\\app\\views\\users\\index.json.erb"
+			],
+			[
+				"appcont",
+				"household_server\\app\\controllers\\application_controller.rb"
+			],
+			[
+				"apprb",
+				"household_server\\config\\application.rb"
+			],
+			[
+				"clientinde",
+				"household_client\\app\\index.html"
+			],
+			[
+				"appjs",
+				"household_server\\app\\assets\\javascripts\\application.js"
+			],
+			[
+				"jquery",
+				"household_client\\app\\lib\\jquery.1.11.2.min.js"
+			],
+			[
+				"jsonerb",
+				"household_server\\app\\views\\users\\create.json.erb"
+			],
+			[
+				"gemfi",
+				"household_server\\Gemfile"
+			],
+			[
+				"userc",
+				"household_server\\app\\controllers\\users_controller.rb"
+			],
+			[
+				"appcontr",
+				"household_server\\app\\controllers\\application_controller.rb"
+			],
+			[
+				"user",
+				"household_server\\app\\controllers\\users_controller.rb"
+			],
+			[
+				"config.ru",
+				"household_server\\config.ru"
+			],
+			[
+				"routes",
+				"household_server\\config\\routes.rb"
+			],
+			[
+				"configapprb",
+				"household_server\\config\\application.rb"
+			],
+			[
+				"users",
+				"household_server\\app\\controllers\\users_controller.rb"
+			],
+			[
+				"usercon",
+				"household_server\\app\\controllers\\users_controller.rb"
+			],
+			[
+				"appcontrb",
+				"household_server\\app\\controllers\\application_controller.rb"
+			],
+			[
+				"main.scs",
+				"household_client\\app\\assets\\stylesheets\\main.scss"
+			],
+			[
+				"idex",
+				"household_client\\app\\index.html"
+			],
+			[
+				"appcon",
+				"household_server\\app\\controllers\\application_controller.rb"
+			],
+			[
+				"invijs",
+				"new-invitation-css\\assets\\js\\invitd.js"
+			],
+			[
+				"invit.",
+				"new-invitation-css\\assets\\js\\invitd.js"
+			],
+			[
+				"invcss",
+				"new-invitation-css\\assets\\css\\invitation.css"
+			],
+			[
+				"index",
+				"new-invitation-css\\index.php"
+			],
+			[
+				"php",
+				"new-invitation-css\\assets\\php\\phpscripts.php"
+			],
+			[
+				"invi.js",
+				"new-invitation-css\\assets\\js\\invitd.js"
+			],
+			[
+				".js",
+				"new-invitation-css\\assets\\js\\invitd.js"
+			],
+			[
+				"mock",
+				"new-invitation-css\\mockdata.md"
+			],
+			[
+				"invicss",
+				"new-invitation-css\\assets\\css\\invitation.css"
+			],
+			[
+				"invitd.js",
+				"new-invitation-css\\assets\\js\\invitd.js"
+			],
+			[
+				"pagetran",
+				"new-invitation-css\\assets\\js\\pagetransitions.js"
+			],
+			[
+				".php",
+				"new-invitation-css\\assets\\php\\phpscripts.php"
+			],
+			[
+				"invi",
+				"new-invitation-css\\assets\\css\\invitation.css"
+			],
+			[
+				"invjs",
+				"new-invitation-css\\assets\\js\\invitd.js"
+			],
+			[
+				"send",
+				"new-invitation-css\\assets\\php\\sendresponse.php"
+			],
+			[
+				".css",
+				"new-invitation-css\\assets\\css\\invitation.css"
+			],
+			[
+				"pagetra",
+				"new-invitation-css\\assets\\js\\pagetransitions.js"
+			],
+			[
+				"invitat",
+				"new-invitation-css\\assets\\css\\invitation.css"
+			],
+			[
+				".md",
+				"new-invitation-css-notes\\ids.md"
+			],
+			[
+				"payme",
+				"db\\migrate\\20150120124115_add_company_url_to_game.rb"
+			],
+			[
+				"schema",
+				"db\\schema.rb"
+			],
+			[
+				"database",
+				"config\\database.yml"
+			],
+			[
+				"modelgame",
+				"app\\models\\game.rb"
+			],
+			[
+				"modeluser",
+				"app\\models\\user.rb"
+			],
+			[
+				"gamereq",
+				"app\\models\\game_request.rb"
+			],
+			[
+				"js.erb",
+				"app\\views\\game_requests\\check_game_request.js.erb"
+			],
+			[
+				"indexgal",
+				"app\\views\\games\\_index_gallery.html.erb"
+			],
+			[
+				"apphelp",
+				"app\\helpers\\application_helper.rb"
+			],
+			[
+				"gamereqcont",
+				"app\\controllers\\game_requests_controller.rb"
+			],
+			[
+				"weindex",
+				"app\\views\\welcome\\index.html.erb"
+			],
+			[
+				"gamreqnew",
+				"app\\views\\game_requests\\new.html.erb"
+			],
+			[
+				"gamecont",
+				"app\\controllers\\games_controller.rb"
+			],
+			[
+				"gameinde",
+				"app\\views\\games\\_index_gallery.html.erb"
+			],
+			[
+				"gamecon",
+				"app\\controllers\\games_controller.rb"
+			],
+			[
+				"new",
+				"app\\views\\game_codes\\new.html.erb"
+			],
+			[
+				"gamenew",
+				"app\\views\\game_requests\\new.html.erb"
+			],
+			[
+				"indegall",
+				"app\\views\\games\\_index_gallery.html.erb"
+			],
+			[
+				"gameindex",
+				"app\\views\\games\\index.html.erb"
+			],
+			[
+				"gamereqcon",
+				"app\\controllers\\game_requests_controller.rb"
+			],
+			[
+				"head",
+				"components\\head.dat.php"
+			],
+			[
+				"bihcss",
+				"assets\\stylesheets\\bih-stylesheet.css"
+			],
+			[
+				"read",
+				"readme.md"
+			],
+			[
+				"basel",
+				"app\\assets\\stylesheets\\base-layout.css.scss"
+			],
+			[
+				"footer",
+				"app\\views\\shared\\_footer.html.erb"
+			],
+			[
+				"applhtm",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"custom",
+				"app\\assets\\stylesheets\\custom.css"
+			],
+			[
+				"databa",
+				"config\\database.yml"
+			],
+			[
+				"indecss",
+				"www\\css\\index.css"
+			],
+			[
+				"index.css",
+				"www\\css\\index.css"
+			],
+			[
+				"",
+				"C:\\RPGXP\\battle.rb"
+			],
+			[
+				"usersindex",
+				"app\\views\\users\\index.html.erb"
+			],
+			[
+				"controller",
+				"app\\controllers\\static_pages_controller.rb"
+			],
+			[
+				"apphtml.",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"migra",
+				"db\\migrate\\20141030181708_create_users.rb"
+			],
+			[
+				"web",
+				"app\\assets\\stylesheets\\layout-web.css"
+			],
+			[
+				"conuser",
+				"app\\controllers\\users_controller.rb"
+			],
+			[
+				"ucont",
+				"app\\controllers\\users_controller.rb"
+			],
+			[
+				"uscon",
+				"app\\controllers\\users_controller.rb"
+			],
+			[
+				"unew",
+				"app\\views\\users\\new.html.erb"
+			],
+			[
+				"usin",
+				"app\\views\\users\\index.html.erb"
+			],
+			[
+				"appliaction.htm",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"applicahtml",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"aphtml",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"apher",
+				"app\\helpers\\application_helper.rb"
+			],
+			[
+				"applicat",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"layout",
+				"app\\assets\\stylesheets\\layout-web.css"
+			],
+			[
+				"applihtm",
+				"app\\views\\layouts\\application.html.erb"
+			],
+			[
+				"stati",
+				"app\\controllers\\static_pages_controller.rb"
+			],
+			[
+				"application",
+				"app\\views\\layouts\\application.html.erb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"newinvi",
+				"C:\\bitbucket\\new-invitation-css.sublime-project"
+			],
+			[
+				"BI",
+				"C:\\Users\\xiq\\Desktop\\Web\\bih.sublime-project"
+			],
+			[
+				"samples",
+				"C:\\github\\samples.js.sublime-project"
+			],
+			[
+				"js",
+				"C:\\github\\samples.js.sublime-project"
+			],
+			[
+				"",
+				"C:\\github\\emulator_ruby.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 290.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
