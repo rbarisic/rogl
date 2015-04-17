@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rb-readline' # bugfix
+# gem 'rb-readline' # bugfix for windows console
 gem 'gosu'
-gem 'releasy'
+require 'rake'
+gem 'opal' # Uses the Opal Ruby to Javascript Transcompiler
+gem 'colorize'

@@ -1,5 +1,5 @@
 # # Event-Queue
-# class Engine
+# module Engine
 #     class Events
 #         def initialize
 #             @events = []

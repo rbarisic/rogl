@@ -1,5 +1,5 @@
 # File Handling
-class Engine
+module Engine
     class Filehandling
         def file_job(path, &block)
             file = File.new(path,"w+")

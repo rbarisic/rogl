@@ -2,9 +2,27 @@ GEM
   remote: https://rubygems.org/
   specs:
     gosu (0.8.7.2-x86-mingw32)
+    hike (1.2.3)
+    multi_json (1.11.0)
+    opal (0.7.1)
+      hike (~> 1.2)
+      sourcemap (~> 0.1.0)
+      sprockets (>= 2.2.3, < 4.0.0)
+      tilt (~> 1.4)
+    rack (1.5.2)
+    rake (10.4.2)
+    sourcemap (0.1.1)
+    sprockets (2.12.3)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    tilt (1.4.1)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
   gosu
+  opal
+  rake
