@@ -1,10 +1,10 @@
 require './engine.rb'
 
-window = Engine::Window.new
+$window = Engine::Window.new(false) # no fullscreen
 
 @col = Gosu::Color.argb(0xff00ffff)
 base_element = Engine::GUI::Window.new(20,20,200,200,@col)
-window.entities << base_element
+$window.entities << base_element
 putv base_element
 
-window.show
+$window.show

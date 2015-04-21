@@ -7,8 +7,10 @@ end
 module Engine
     class Window < Gosu::Window
         attr_accessor :events, :entities
-        def initialize
-            super(800,480,false)
+        def initialize(fullscreen)
+            super(1024,768,fullscreen)
+            @x = 0
+            @y = 0
             self.caption = "Gosu Tutorial Game"
             @col = Settings::BACKGROUND_FOG
             @entities = []

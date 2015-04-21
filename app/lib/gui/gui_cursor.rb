@@ -40,15 +40,15 @@ module Engine
                 @y = @window.mouse_y
                 if (@x != @last_x) || (@y != @last_y)
                     if object_underneath?(@window.entities) == true
-                        puts "yes"
+                        puts "object underneath cursor"
                         @image = @images[:highlight]
                     else
                         @image = @images[:default]
                     end
                 end
 
-                putv "x in 1 step: #{@x - @last_x}"
-                putv "y in 1 step: #{@y - @last_y}"
+                # putv "x in 1 step: #{@x - @last_x}"
+                # putv "y in 1 step: #{@y - @last_y}"
             end
 
             def draw(window)
@@ -78,6 +78,10 @@ module Engine
 
             def left_mouse_down?
                 return true if @left_mouse_down == true
+            end
+
+            def right_mouse_down?
+                return true if @right_mouse_down == true
             end
 
             def left_mouse_up

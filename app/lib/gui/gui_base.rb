@@ -1,15 +1,19 @@
 module Engine
     module GUI
         class Base
-            attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :draggable, :sender
+            attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :clickable, :draggable, :sender
             
-            def initialize(x,y,width,height,color, draggable: true)
+            def initialize(x,y,width,height,color, clickable: false, draggable: true)
                 @x = x
                 @y = y
                 @last_x = @x
                 @last_y = @y
                 @width = width
                 @height = height
+                @min_width = 16
+                @min_height = 16
+                @max_width = $window.width
+                @max_height = $window.height
                 @col = color
                 @draggable = draggable
                 putv "Element #{self} Created".colorize(:blue)
@@ -17,26 +21,35 @@ module Engine
             end
 
             def update
+                @last_x = @x
+                @last_y = @y
                 if @sender
-                    "puts #{@sender} active!"
+                    putv "#{@sender} active!"
 
-                    if @draggable == true
-                        puts "is draggable"
-                        # if @sender.instance_of?(Engine::GUI::Cursor)
-                        #     puts "is cursor"
-                            if @sender.left_mouse_down?
-                                puts "LMB is DOWN"
-                                distance_x = @sender.x - x # distance object left top to cursor
-                                distance_y = @sender.y - y # distance object left top to cursor
+                    if @sender.left_mouse_down?
+                        putv "LMB is DOWN"
 
-                                @x += (@sender.x - @sender.last_x)
-                                @y += (@sender.y - @sender.last_y)
-                            else
-                                puts "LMB is UP"
-                            end
-                        # end
+                        if @clickable == true
+                            putv "#{self} clicked!"
+                        elsif @draggable == true #&& inside_boundaries?(0,0,800,600)
+                            putv "is draggable"
+                            distance_x = @sender.x - x # distance object left top to cursor
+                            distance_y = @sender.y - y # distance object left top to cursor
+                            @x += (@sender.x - @sender.last_x)
+                            @y += (@sender.y - @sender.last_y)
+                            align_to_boundaries(0,0,$window.width,$window.height) if !inside_boundaries?(0,0,$window.width,$window.height)
+                        end
+                    else
+                        putv "LMB is UP"
                     end
-                end
+                    if @sender.right_mouse_down?
+                        distance_x = @sender.x - x
+                        distance_y = @sender.y - y
+                        @width += (@sender.x - @sender.last_x)
+                        @height += (@sender.y - @sender.last_y)
+                        align_to_boundaries(0,0,$window.width,$window.height)
+                    end
+                end                
             end
 
             # def draggable?
@@ -67,25 +80,37 @@ module Engine
                 return y + height
             end
 
-            def receive_click(sender)
-                @sender = sender
-                # putv "click event called."
-                # if @draggable == true
-                #     if sender.instance_of?(Engine::GUI::Cursor)
-                #         putv "#{self} is draggable"
-                #         # distance_x = Math.sqrt((x - sender.x) * (x - sender.x)) # returns non-negative
-                #         # distance_y = Math.sqrt((y - sender.y) * (y - sender.y)) # returns non-negative
-                #         # distance_x = sender.x - x # distance object left top to cursor
-                #         # distance_y = sender.y - y # distance object left top to cursor
+            def align_to_boundaries(x,y,width,height)
+                self.x = x if self.x < x
+                self.x = width - self.width if self.x > (width - self.width)
+                self.y = y if self.y < y
+                self.y = height - self.height if self.y > (height - self.height)
 
-                #         # move relative *with* cursor
-                #         @x = sender.last_x - sender.x
-                #     else
-                #         putv "#{sender} is not a cursor"
-                #     end
-                # else
-                #     putv "#{self} is not draggable"
-                # end
+                self.width = x + 16 if self.width < x + 16
+                self.width = width if self.width > width
+
+                self.height = x + 16 - y if self.height < x + 16 - y
+                self.height = height if self.height > height
+
+                #==================================================
+                # BUG: Window doesn't stop resizing!
+                #==================================================
+            end
+
+            def inside_boundaries?(x,y,width,height)
+                if ( self.x > x && (self.x + self.width) < (x + width) && self.y > y && (self.y + self.height) < (y + height))
+                    return true
+                end
+            end
+
+            def inside_boundaries_of?(limiter)
+                if ( x > limiter.x && x2 < limiter.width && y > limiter.y && y < limiter.height )
+                    return true
+                end
+            end
+
+            def receive_click(sender)
+                @sender = sender #hotfix - replace this!
             end
 
             def draw(window)
