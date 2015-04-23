@@ -6,8 +6,8 @@ def realtime # :yield:
   @total_time += e
   if @frame_count == 60
     @fps = @frame_count / @total_time
-    puts "Time taken for 60 steps: #{@total_time}s"
-    puts "FPS: #{@fps}"
+    putv "Time taken for 60 steps: #{@total_time}s"
+    putv "FPS: #{@fps}"
     @frame_count = 0
     @total_time = 0
   end
@@ -31,6 +31,7 @@ module Engine
             @benchmark = true if ARGV.include?('--benchmark')
             @frame_count = 0
             @total_time = 0
+            @font = Gosu::Font.new(self,"./assets/fonts/Roboto-Light.ttf",32)
         end
 
         def quit_game
@@ -95,11 +96,37 @@ module Engine
         end
         
         def draw
+            clear_screen
+            @font.draw("This is a Window",32,32,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @cursor.draw(self)
             @entities.each do |e|
                 # putv "Drawing #{e}"
                 e.draw(self)
             end
+        end
+
+        def clear_screen
+            self.draw_quad(
+                #1
+                @x,
+                @y,
+                Gosu::Color.argb(0x333333ff),
+                #2
+                self.width,
+                @y,
+                Gosu::Color.argb(0x333333ff),
+                #3
+                @x,
+                self.height,
+                Gosu::Color.argb(0xff00ffff),
+                #4
+                self.width,
+                self.height,
+                Gosu::Color.argb(0xff00ffff),
+
+                z = 0,
+                mode = :default
+            )
         end
     end
 end

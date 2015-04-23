@@ -1,2 +1,2 @@
 cd app
-ruby $1.rb --verbose
+ruby $1.rb

@@ -1,9 +1,9 @@
 module Engine
     module GUI
         class Base
-            attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :clickable, :draggable, :sender
+            attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :clickable, :draggable, :sender, :border
             
-            def initialize(x,y,width,height,color, clickable: false, draggable: true)
+            def initialize(x,y,width,height,color, clickable: false, draggable: true, border: { size: 0, color: nil})
                 @x = x
                 @y = y
                 @last_x = @x
@@ -18,6 +18,7 @@ module Engine
                 @draggable = draggable
                 putv "Element #{self} Created".colorize(:blue)
                 @sender = nil
+                @border = border
             end
 
             def update
@@ -136,7 +137,40 @@ module Engine
                 @sender = sender #hotfix - replace this!
             end
 
+            def border_valid?
+                if @border[:size] != 0 && @border[:color] != nil
+                    return true
+                end
+            end
+
+            def draw_border
+                $window.draw_quad(
+                    #v1
+                    @x - @border[:size],
+                    @y - @border[:size],
+                    @border[:color],
+                    #3
+                    @x + @width + @border[:size],
+                    @y - @border[:size],
+                    @border[:color],
+                    #3
+                    @x - @border[:size],
+                    @y + @height + @border[:size],
+                    @border[:color],
+                    #4
+                    @x + @width + @border[:size],
+                    @y + @height + @border[:size],
+                    @border[:color],
+
+                    z = 0,
+                    mode = :default
+                )
+            end
+
             def draw(window)
+
+                draw_border # if border_valid?
+
                 window.draw_quad(
                     #v1
                     @x,

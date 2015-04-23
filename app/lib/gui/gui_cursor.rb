@@ -40,7 +40,7 @@ module Engine
                 @y = @window.mouse_y
                 if (@x != @last_x) || (@y != @last_y)
                     if object_underneath?(@window.entities) == true
-                        puts "object underneath cursor"
+                        putv "object underneath cursor"
                         @image = @images[:highlight]
                     else
                         @image = @images[:default]
