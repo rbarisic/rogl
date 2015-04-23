@@ -1,7 +1,18 @@
 def realtime # :yield:
   r0 = Time.now
   yield
-  Time.now - r0
+  e = Time.now - r0
+  @frame_count += 1
+  @total_time += e
+  if @frame_count == 60
+    @fps = @frame_count / @total_time
+    puts "Time taken for 60 steps: #{@total_time}s"
+    puts "FPS: #{@fps}"
+    @frame_count = 0
+    @total_time = 0
+  end
+  print "\rStep: #{e * 1000}ms" if @benchmark
+  return e
 end
 
 module Engine
@@ -18,6 +29,8 @@ module Engine
             @cursor = Engine::GUI::Cursor.new(self,"assets/img/cursor.png","assets/img/cursor_highlight.png")
             @entities.push()
             @benchmark = true if ARGV.include?('--benchmark')
+            @frame_count = 0
+            @total_time = 0
         end
 
         def quit_game
@@ -30,7 +43,6 @@ module Engine
             @cursor.update
 
             step = realtime do
-
                 def button_up(id)
                     case(id)
                         when Gosu::MsLeft
@@ -70,7 +82,6 @@ module Engine
                             end
                         else
                             puts id
-                        # end when
                     end # end case
                 end
 
@@ -81,14 +92,12 @@ module Engine
                     # end
                 end
             end
-            STDOUT.write "Step: \r#{step * 1000}ms" if @benchmark
         end
         
         def draw
             @cursor.draw(self)
             @entities.each do |e|
                 # putv "Drawing #{e}"
-                putb '.'
                 e.draw(self)
             end
         end

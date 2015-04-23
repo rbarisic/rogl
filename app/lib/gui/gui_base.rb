@@ -32,24 +32,47 @@ module Engine
                         if @clickable == true
                             putv "#{self} clicked!"
                         elsif @draggable == true #&& inside_boundaries?(0,0,800,600)
-                            putv "is draggable"
-                            distance_x = @sender.x - x # distance object left top to cursor
-                            distance_y = @sender.y - y # distance object left top to cursor
-                            @x += (@sender.x - @sender.last_x)
-                            @y += (@sender.y - @sender.last_y)
-                            align_to_boundaries(0,0,$window.width,$window.height) if !inside_boundaries?(0,0,$window.width,$window.height)
+                            drag
                         end
                     else
                         putv "LMB is UP"
                     end
                     if @sender.right_mouse_down?
-                        distance_x = @sender.x - x
-                        distance_y = @sender.y - y
-                        @width += (@sender.x - @sender.last_x)
-                        @height += (@sender.y - @sender.last_y)
-                        align_to_boundaries(0,0,$window.width,$window.height)
+                        resize
+                    end
+                        putv "#{$window.entities.count}".colorize(:blue) + " entity/entities found."
+                    if $window.entities.count > 1
+                        dock($window.entities)
                     end
                 end                
+            end
+
+            def dock(objects)
+                objects.each do |object|
+                    for i in (self.x - 10).to_i..(self.x + 10).to_i do
+                        if object.x == i
+                            self.x = object.x
+                        end
+                    end
+                    
+                end
+            end
+
+            def resize
+                distance_x = @sender.x - x
+                distance_y = @sender.y - y
+                @width += (@sender.x - @sender.last_x)
+                @height += (@sender.y - @sender.last_y)
+                align_to_boundaries(0,0,$window.width,$window.height)
+            end
+
+            def drag
+                putv "is draggable"
+                distance_x = @sender.x - x # distance object left top to cursor
+                distance_y = @sender.y - y # distance object left top to cursor
+                @x += (@sender.x - @sender.last_x)
+                @y += (@sender.y - @sender.last_y)
+                align_to_boundaries(0,0,$window.width,$window.height) if !inside_boundaries?(0,0,$window.width,$window.height)
             end
 
             # def draggable?

@@ -9,7 +9,7 @@ def putb(string) #put benchmark-info
     puts "#{string}" if ARGV.include?('--benchmark')
 end
 
-def require_all(path, message: nil)
+def require_all(path, message)
     puts message
     Dir[File.dirname(__FILE__) + "/#{path}/*.rb"].each do |file|
         begin
