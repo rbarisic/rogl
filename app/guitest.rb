@@ -1,6 +1,6 @@
 require './engine.rb'
 
-$window = Engine::Window.new(true) # no fullscreen
+$window = Engine::Window.new(false) # no fullscreen
 
 @col = Gosu::Color.argb(0xff333333)
 base_element = Engine::GUI::Window.new(20,20,200,200,@col, border: { size: 4, color: Gosu::Color.new(127,255,255,255) })

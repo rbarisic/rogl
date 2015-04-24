@@ -20,9 +20,10 @@ module Engine
         attr_accessor :events, :entities
         def initialize(fullscreen)
             super(1024,768,fullscreen)
+            @copyright = "ROGL by xrlabs - Dev Build"
             @x = 0
             @y = 0
-            self.caption = "Gosu Tutorial Game"
+            self.caption = "ROGL - Ruby Open Game Layer [ by xrlabs ]"
             @col = Settings::BACKGROUND_FOG
             @entities = []
             @events = []
@@ -32,6 +33,7 @@ module Engine
             @frame_count = 0
             @total_time = 0
             @font = Gosu::Font.new(self,"./assets/fonts/Roboto-Light.ttf",32)
+            @font_small = Gosu::Font.new(self,"./assets/fonts/Roboto-Bold.ttf",18)
         end
 
         def quit_game
@@ -98,6 +100,7 @@ module Engine
         def draw
             clear_screen
             @font.draw("This is a Window",32,32,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
+            @font_small.draw(@copyright,(self.width * 0.5).to_i - (@font_small.text_width(@copyright, factor_x = 1) * 0.5) ,self.height - (@font_small.height * 1.5),1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @cursor.draw(self)
             @entities.each do |e|
                 # putv "Drawing #{e}"
