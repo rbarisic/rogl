@@ -1,9 +1,10 @@
 module Engine
     module GUI
         class Base
-            attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :clickable, :draggable, :sender, :border
+            include Observable
+            attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :clickable, :draggable, :resizable, :border
             
-            def initialize(x,y,width,height,color, clickable: false, draggable: true, border: { size: 0, color: nil})
+            def initialize(x,y,width,height,color, clickable: false, draggable: false, border: { size: 0, color: nil})
                 @x = x
                 @y = y
                 @last_x = @x
@@ -16,36 +17,40 @@ module Engine
                 @max_height = $window.height
                 @col = color
                 @draggable = draggable
+                @resizable = resizable
                 putv "Element #{self} Created".colorize(:blue)
-                @sender = nil
-                @border = border
+                @border = { size: 4, color: Gosu::Color.new(127,255,255,255) }
+                @state = 'default'
+                $window.cursor.add_observer(self, :cursor_event)
+            end
+
+            def cursor_event(event)
+                case(event)
+                    when 'lmb_down'
+                        if check_collision($window.cursor,self)
+                            @state = 'drag'
+                        end
+                    when 'lmb_up'
+                        @state = 'default'
+                    when 'rmb_down'
+                        if check_collision($window.cursor,self)
+                            @state = 'resize'
+                        end
+                    when 'rmb_up'
+                        @state = 'default'
+                    when 'mmb_down'
+
+                    when 'mmb_up'
+                        @state = 'default'
+                end
             end
 
             def update
                 @last_x = @x
                 @last_y = @y
-                if @sender
-                    putv "#{@sender} active!"
 
-                    if @sender.left_mouse_down?
-                        putv "LMB is DOWN"
-
-                        if @clickable == true
-                            putv "#{self} clicked!"
-                        elsif @draggable == true #&& inside_boundaries?(0,0,800,600)
-                            drag
-                        end
-                    else
-                        putv "LMB is UP"
-                    end
-                    if @sender.right_mouse_down?
-                        resize
-                    end
-                        putv "#{$window.entities.count}".colorize(:blue) + " entity/entities found."
-                    if $window.entities.count > 1
-                        dock($window.entities)
-                    end
-                end                
+                drag if @state == 'drag'
+                resize if @state == 'resize'
             end
 
             def dock(objects)
@@ -60,19 +65,20 @@ module Engine
             end
 
             def resize
-                distance_x = @sender.x - x
-                distance_y = @sender.y - y
-                @width += (@sender.x - @sender.last_x)
-                @height += (@sender.y - @sender.last_y)
+                distance_x = $window.cursor.x - x
+                distance_y = $window.cursor.y - y
+                @width += ($window.cursor.x - $window.cursor.last_x)
+                @height += ($window.cursor.y - $window.cursor.last_y)
+                resize_to_boundaries(0,0,$window.width,$window.height)
                 align_to_boundaries(0,0,$window.width,$window.height)
             end
 
             def drag
                 putv "is draggable"
-                distance_x = @sender.x - x # distance object left top to cursor
-                distance_y = @sender.y - y # distance object left top to cursor
-                @x += (@sender.x - @sender.last_x)
-                @y += (@sender.y - @sender.last_y)
+                distance_x = $window.cursor.x - x # distance object left top to cursor
+                distance_y = $window.cursor.y - y # distance object left top to cursor
+                @x += ($window.cursor.x - $window.cursor.last_x)
+                @y += ($window.cursor.y - $window.cursor.last_y)
                 align_to_boundaries(0,0,$window.width,$window.height) if !inside_boundaries?(0,0,$window.width,$window.height)
             end
 
@@ -104,17 +110,22 @@ module Engine
                 return y + height
             end
 
-            def align_to_boundaries(x,y,width,height)
-                self.x = x if self.x < x
-                self.x = width - self.width if self.x > (width - self.width)
-                self.y = y if self.y < y
-                self.y = height - self.height if self.y > (height - self.height)
+            def resize_to_boundaries(screen_left,screen_top,screen_right,screen_bottom)
+                self.width = screen_right - self.x if (self.x + self.width) > (screen_right)
+                self.height = screen_bottom - self.y if (self.y + self.height) > (screen_bottom)
+            end
 
-                self.width = x + 16 if self.width < x + 16
-                self.width = width if self.width > width
+            def align_to_boundaries(screen_left,screen_top,screen_right,screen_bottom)
+                self.x = screen_left if self.x < screen_left
+                self.x = screen_right - self.width if self.x > (screen_right - self.width)
+                self.y = screen_top if self.y < screen_top
+                self.y = screen_bottom - self.height if self.y > (screen_bottom - self.height)
 
-                self.height = x + 16 - y if self.height < x + 16 - y
-                self.height = height if self.height > height
+                self.width = screen_left + 16 if self.width < screen_left + 16
+                self.width = screen_right if self.width > screen_right
+
+                self.height = screen_left + 16 - screen_top if self.height < screen_left + 16 - screen_top
+                self.height = screen_bottom if self.height > screen_bottom
 
                 #==================================================
                 # BUG: Window doesn't stop resizing!
@@ -131,10 +142,6 @@ module Engine
                 if ( x > limiter.x && x2 < limiter.width && y > limiter.y && y < limiter.height )
                     return true
                 end
-            end
-
-            def receive_click(sender)
-                @sender = sender #hotfix - replace this!
             end
 
             def border_valid?

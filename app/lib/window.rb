@@ -17,7 +17,7 @@ end
 
 module Engine
     class Window < Gosu::Window
-        attr_accessor :events, :entities
+        attr_accessor :events, :entities, :cursor
         def initialize(fullscreen)
             super(1024,768,fullscreen)
             @copyright = "ROGL by xrlabs - Dev Build"
@@ -49,22 +49,22 @@ module Engine
                 def button_up(id)
                     case(id)
                         when Gosu::MsLeft
-                            @cursor.left_mouse_up
+                            @cursor.left_up
                         when Gosu::MsRight
-                            @cursor.right_mouse_up
+                            @cursor.right_up
                         when Gosu::MsMiddle
-                            @cursor.middle_mouse_up
+                            @cursor.middle_up
                     end
                 end
 
                 def button_down(id)
                     case(id)
                         when Gosu::MsLeft
-                            @cursor.left_mouse_down
+                            @cursor.left_down
                         when Gosu::MsRight
-                            @cursor.right_mouse_down
+                            @cursor.right_down
                         when Gosu::MsMiddle
-                            @cursor.middle_mouse_down
+                            @cursor.middle_down
                         when Gosu::KbUp then
                             Event.new {
                                 puts "UP"

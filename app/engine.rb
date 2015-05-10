@@ -1,3 +1,4 @@
+require 'observer'
 require 'colorize'
 require 'gosu'
 
@@ -25,8 +26,8 @@ end
 require_all('lib', message: 'Loading Engine')
 require_all('config', message: 'Loading Configuration')
 require_all('./assets/entities', message: 'Loading Entities')
-#
-# NOT WORKING WITH OPAL // STATIC REQUIRE INSTEAD
+#  ^
+#  THIS IS NOT WORKING WITH OPAL // STATIC REQUIRE INSTEAD
 #===================================
 
 # window = Engine::Window.new
