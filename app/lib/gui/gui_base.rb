@@ -80,27 +80,19 @@ module Engine
             #     return true if @draggable
             # end
 
-            def x2
+            def right
                 return x + width
             end
 
-            def y2
+            def top
                 return y
             end
 
-            def x3
+            def left
                 return x
             end
 
-            def y3
-                return y + height
-            end
-
-            def x4
-                return x + width
-            end
-
-            def y4
+            def bottom
                 return y + height
             end
 
@@ -128,7 +120,7 @@ module Engine
             end
 
             def inside_boundaries_of?(limiter)
-                if ( x > limiter.x && x2 < limiter.width && y > limiter.y && y < limiter.height )
+                if ( x > limiter.x && right < limiter.width && y > limiter.y && y < limiter.height )
                     return true
                 end
             end

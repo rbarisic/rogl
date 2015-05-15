@@ -20,13 +20,13 @@ module Engine
 
             def object_underneath(entities)
                 entities.each do |e|
-                    return e if (e != self) && (@x > e.x && @x < e.x2) && (@y > e.y && @y < e.y4)
+                    return e if (e != self) && (@x > e.x && @x < e.right) && (@y > e.y && @y < e.bottom)
                 end
             end
 
             def object_underneath?(entities)
                 entities.each do |e|
-                    if (e != self) && (@x > e.x && @x < e.x2) && (@y > e.y && @y < e.y4)
+                    if (e != self) && (@x > e.x && @x < e.right) && (@y > e.y && @y < e.bottom)
                         putv e
                         return true
                     end

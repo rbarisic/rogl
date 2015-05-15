@@ -1,5 +1,10 @@
 require 'colorize'
 require 'gosu'
+require 'sqlite3'
+
+$tile_size = 64
+$tile_width = 128
+$tile_height = 64
 
 def putv(string) #put verbosely
     puts "#{string}" if ARGV.include?('--verbose')

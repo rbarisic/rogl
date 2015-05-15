@@ -1,3 +1,6 @@
+require "observer"
+
+
 def realtime # :yield:
   r0 = Time.now
   yield
@@ -17,6 +20,7 @@ end
 
 module Engine
     class Window < Gosu::Window
+        include Observable
         attr_accessor :events, :entities
         def initialize(fullscreen)
             super(1024,768,fullscreen)
@@ -34,6 +38,7 @@ module Engine
             @total_time = 0
             @font = Gosu::Font.new(self,"./assets/fonts/Roboto-Light.ttf",32)
             @font_small = Gosu::Font.new(self,"./assets/fonts/Roboto-Bold.ttf",18)
+            @tile = Gosu::Image.new(self,'./assets/img/tile128.png',false)
         end
 
         def quit_game
@@ -58,6 +63,8 @@ module Engine
                 end
 
                 def button_down(id)
+                    changed
+                    notify_observers(id)
                     case(id)
                         when Gosu::MsLeft
                             @cursor.left_mouse_down
@@ -65,10 +72,6 @@ module Engine
                             @cursor.right_mouse_down
                         when Gosu::MsMiddle
                             @cursor.middle_mouse_down
-                        when Gosu::KbUp then
-                            Event.new {
-                                puts "UP"
-                            }.push(@events)
                         when Gosu::KbE
                             Event.new {
                                 @entities.push(Engine::GUI::Base.new(20,20,200,200,@col))
@@ -99,7 +102,8 @@ module Engine
         
         def draw
             clear_screen
-            @font.draw("This is a Window",32,32,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
+            draw_tiles
+            @font.draw(($project_name ||= "Untitled Project"),16,16,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @font_small.draw(@copyright,(self.width * 0.5).to_i - (@font_small.text_width(@copyright, factor_x = 1) * 0.5) ,self.height - (@font_small.height * 1.5),1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @cursor.draw(self)
             @entities.each do |e|
@@ -130,6 +134,26 @@ module Engine
                 z = 0,
                 mode = :default
             )
+        end
+
+        def iso_x(x,y,z)
+            return (x - y) * ($tile_width / 2)
+        end
+
+        def iso_y(x,y,z)
+            return (x + y) * ($tile_height / 2) - (z * 16)
+        end
+
+        def draw_iso(image,x,y,z)
+            image.draw(x,y,z)
+        end
+
+        def draw_tiles
+            (self.width / $tile_width).times do |ix|
+                (self.height / $tile_height).times do |iy|                   
+                    draw_iso(@tile,iso_x(ix + 8,iy,0),iso_y(ix,iy + 2,0),iy)
+                end
+            end
         end
     end
 end
