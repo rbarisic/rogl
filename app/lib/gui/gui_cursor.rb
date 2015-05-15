@@ -4,7 +4,7 @@ module Engine
             include Observable
             attr_accessor :x, :y, :last_x, :last_y, :images
             
-            def initialize(window,image,highlight)
+            def initialize(window)
                 @window = window
                 @x = window.mouse_x
                 @y = window.mouse_y
@@ -12,7 +12,7 @@ module Engine
                 @last_y = @y
                 @width = 32
                 @height = 32
-                @images = { default: Gosu::Image.new(window,image,false), highlight: Gosu::Image.new(@window,highlight,false) }
+                @images = { default: Gosu::Image.new(window,"assets/img/cursor.png",false), highlight: Gosu::Image.new(@window,"assets/img/cursor_highlight.png",false) }
                 @image = @images[:default]
                 @left_mouse_down = false
                 @right_mouse_down = false

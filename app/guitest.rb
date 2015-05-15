@@ -10,6 +10,8 @@ $window.entities << base_element
 base_element = Engine::GUI::Window.new(80,80,220,40,@col)
 $window.entities << base_element
 
+$window.entities << Engine::GUI::Window.new(200,200,220,40,@col, draggable: false)
+
 putv base_element
 
 # $window.entities << Engine::GUI::MainMenu.new

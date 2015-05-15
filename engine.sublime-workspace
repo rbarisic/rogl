@@ -235,26 +235,16 @@
 			"file": "app/lib/window.rb",
 			"settings":
 			{
-				"buffer_size": 4537,
+				"buffer_size": 4486,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/lib/gui/gui_cursor.rb",
+			"file": "app/assets/entities/player.rb",
 			"settings":
 			{
-				"buffer_size": 3272,
+				"buffer_size": 750,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
-			"settings":
-			{
-				"buffer_size": 2443,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
 			}
 		}
 	],
@@ -265,10 +255,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 357.0,
-		"last_filter": "",
+		"height": 380.0,
+		"last_filter": "close",
 		"selected_items":
 		[
+			[
+				"close",
+				"Project: Close"
+			],
 			[
 				"save",
 				"Project: Save As"
@@ -276,10 +270,6 @@
 			[
 				"addf",
 				"Project: Add Folder"
-			],
-			[
-				"close",
-				"Project: Close"
 			],
 			[
 				"add",
@@ -353,20 +343,24 @@
 	[
 		"/C/github/games/engine",
 		"/C/github/games/engine/app",
-		"/C/github/games/engine/app/config",
-		"/C/github/games/engine/app/lib",
-		"/C/github/games/engine/app/lib/gui"
+		"/C/github/games/engine/app/assets",
+		"/C/github/games/engine/app/assets/entities",
+		"/C/github/games/engine/app/assets/img",
+		"/C/github/games/engine/app/assets/sprites",
+		"/C/github/games/engine/app/lib"
 	],
 	"file_history":
 	[
-		"/C/github/games/engine/app/guitest.rb",
-		"/C/github/games/engine/app/lib/event.rb",
-		"/C/github/games/engine/app/engine.rb",
-		"/C/github/games/engine/app/lib/gui/gui_window_menu.rb",
-		"/C/github/games/engine/app/lib/gui/gui_base.rb",
-		"/C/github/games/engine/app/lib/gui.rb",
-		"/C/github/games/engine/app/lib/window.rb",
 		"/C/github/games/engine/app/lib/gui/gui_cursor.rb",
+		"/C/github/games/engine/app/lib/gui/gui_base.rb",
+		"/C/github/games/engine/app/lib/entities.rb",
+		"/C/github/games/engine/app/guitest.rb",
+		"/C/github/games/engine/app/lib/collision.rb",
+		"/C/github/games/engine/app/engine.rb",
+		"/C/github/games/engine/app/lib/window.rb",
+		"/C/github/games/engine/app/lib/event.rb",
+		"/C/github/games/engine/app/lib/gui/gui_window_menu.rb",
+		"/C/github/games/engine/app/lib/gui.rb",
 		"/C/Users/xiq/Desktop/index.html",
 		"/C/github/games/engine/app/spec/gui/gui_window_spec.rb",
 		"/C/github/games/engine/app/spec/gui_spec.rb",
@@ -379,7 +373,6 @@
 		"/C/github/games/engine/run",
 		"/C/github/games/engine/app/lib/gui/gui_window.rb",
 		"/C/github/games/engine/app/lib/gui/gui_button.rb",
-		"/C/github/games/engine/app/lib/entities.rb",
 		"/C/github/games/engine/app/lib/3d.rb",
 		"/C/github/games/engine/app/config/config.rb",
 		"/C/github/games/engine/app/lib/events.rb",
@@ -485,8 +478,7 @@
 		"/C/xampp/htdocs/bih-consulting/bower_components/jquery/src/dimensions.js",
 		"/C/xampp/htdocs/bih-consulting/bower_components/jquery/src/deferred.js",
 		"/C/xampp/htdocs/bih-consulting/bower_components/jquery/src/data.js",
-		"/C/xampp/htdocs/bih-consulting/views/header.html.php",
-		"/C/bih-consulting/index.php"
+		"/C/xampp/htdocs/bih-consulting/views/header.html.php"
 	],
 	"find":
 	{
@@ -505,6 +497,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$window",
+			"@@image",
+			"player",
+			"@window",
+			"entities",
+			"Entities",
+			"entities",
+			"dock",
+			"height",
+			"y",
+			"width",
+			"x",
+			"self.",
+			"screen",
+			"screen_height",
+			"screen_width",
+			"width",
+			"draggable",
+			"-",
+			"@draggable",
+			"true",
+			"event",
+			"@sender",
+			"draggable",
+			"state",
+			"down",
+			"cursor",
 			"            ",
 			"$window = ",
 			"border: { size: 4, color: Gosu::Color.new(127,255,255,255) }",
@@ -605,34 +624,7 @@
 			"\\s",
 			" ",
 			"Ebene 1",
-			"#lols",
-			"dashed",
-			"360",
-			"1",
-			"camX",
-			"Engine2D",
-			"this",
-			"objects",
-			"object",
-			"e2D(",
-			"warp",
-			"Warp",
-			"div",
-			"</li>",
-			"a>",
-			"a",
-			"autokosten",
-			"value",
-			"window-padded",
-			"example",
-			"slideIn",
-			"i",
-			"I",
-			"i",
-			"recursive",
-			"increase",
-			"morman",
-			"animateToTop"
+			"#lols"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -674,7 +666,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -683,15 +675,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4537,
+						"buffer_size": 4486,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								1456,
+								1457
 							]
 						],
 						"settings":
@@ -701,62 +693,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/lib/gui/gui_cursor.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3272,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1506,
-								1506
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 600.0,
+						"translation.y": 730.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
+					"file": "app/assets/entities/player.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2443,
+						"buffer_size": 750,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2443,
-								2443
+								46,
+								46
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -821,28 +783,32 @@
 		"selected_items":
 		[
 			[
-				"engine",
-				"app\\engine.rb"
+				"base",
+				"app\\lib\\gui\\gui_base.rb"
+			],
+			[
+				"cursor",
+				"app\\lib\\gui\\gui_cursor.rb"
+			],
+			[
+				"guibase",
+				"app\\lib\\gui\\gui_base.rb"
 			],
 			[
 				"guitest",
 				"app\\guitest.rb"
 			],
 			[
-				"engine.r",
-				"app\\engine.rb"
-			],
-			[
 				"window",
 				"app\\lib\\window.rb"
 			],
 			[
-				"base",
-				"app\\lib\\gui\\gui_base.rb"
+				"engine",
+				"app\\engine.rb"
 			],
 			[
-				"guibase",
-				"app\\lib\\gui\\gui_base.rb"
+				"engine.r",
+				"app\\engine.rb"
 			],
 			[
 				"guispec",
@@ -875,10 +841,6 @@
 			[
 				"guiwindow",
 				"app\\lib\\gui\\gui_window.rb"
-			],
-			[
-				"cursor",
-				"app\\lib\\gui\\gui_cursor.rb"
 			],
 			[
 				"entit",
@@ -1162,7 +1124,7 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "games",
+		"last_filter": "",
 		"selected_items":
 		[
 			[

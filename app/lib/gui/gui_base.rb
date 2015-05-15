@@ -4,7 +4,7 @@ module Engine
             include Observable
             attr_accessor :x, :y, :width, :height, :last_x, :last_y, :color, :clickable, :draggable, :resizable, :border
             
-            def initialize(x,y,width,height,color, clickable: false, draggable: false, border: { size: 0, color: nil})
+            def initialize(x,y,width,height,color, clickable: false, resizable: true, draggable: true, border: { size: 0, color: nil})
                 @x = x
                 @y = y
                 @last_x = @x
@@ -49,8 +49,8 @@ module Engine
                 @last_x = @x
                 @last_y = @y
 
-                drag if @state == 'drag'
-                resize if @state == 'resize'
+                drag if @draggable == true && @state == 'drag'
+                resize if @resizable == true && @state == 'resize'
             end
 
             def dock(objects)
