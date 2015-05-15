@@ -1,9 +1,10 @@
 module Engine
     module GUI
         class Cursor
-            attr_accessor :x, :y, :last_x, :last_y, :images, :left_mouse_down, :right_mouse_down, :middle_mouse_down
+            include Observable
+            attr_accessor :x, :y, :last_x, :last_y, :images
             
-            def initialize(window,image,highlight)
+            def initialize(window)
                 @window = window
                 @x = window.mouse_x
                 @y = window.mouse_y
@@ -11,12 +12,50 @@ module Engine
                 @last_y = @y
                 @width = 32
                 @height = 32
-                @images = { default: Gosu::Image.new(window,image,false), highlight: Gosu::Image.new(@window,highlight,false) }
+                @images = { default: Gosu::Image.new(window,"assets/img/cursor.png",false), highlight: Gosu::Image.new(@window,"assets/img/cursor_highlight.png",false) }
                 @image = @images[:default]
                 @left_mouse_down = false
                 @right_mouse_down = false
                 @middle_mouse_down = false
+                @event = 'none'
             end
+
+            def left_down
+                @event = 'lmb_down'
+                changed
+                notify_observers(@event)
+            end
+
+            def left_up
+                @event = 'lmb_up'
+                changed
+                notify_observers(@event)
+            end
+
+            def right_down
+                @event = 'rmb_down'
+                changed
+                notify_observers(@event)
+            end
+
+            def right_up
+                @event = 'rmb_up'
+                changed
+                notify_observers(@event)
+            end
+
+            def middle_down
+                @event = 'mmb_down'
+                changed
+                notify_observers(@event)
+            end
+
+            def middle_up
+                @event = 'mmb_up'
+                changed
+                notify_observers(@event)
+            end
+
 
             def object_underneath(entities)
                 entities.each do |e|
@@ -58,50 +97,10 @@ module Engine
             def scroll(direction)
                 case(direction)
                     when 260 # Scroll Down
-
+                        changed
                     when 259 # Scroll Up
-
+                        changed
                 end
-            end
-
-            def send_click(object)
-                object.receive_click(self)
-            end
-
-            def left_mouse_down
-                @left_mouse_down = true
-                if object_underneath?(@window.entities) == true
-                    @object_underneath = object_underneath(@window.entities)
-                    send_click(@object_underneath)
-                end
-            end
-
-            def left_mouse_down?
-                return true if @left_mouse_down == true
-            end
-
-            def right_mouse_down?
-                return true if @right_mouse_down == true
-            end
-
-            def left_mouse_up
-                @left_mouse_down = false
-            end
-
-            def right_mouse_down
-                @right_mouse_down = true
-            end
-
-            def right_mouse_up
-                @right_mouse_down = false
-            end
-
-            def middle_mouse_down
-                @middle_mouse_down = true
-            end
-
-            def middle_mouse_up
-                @middle_mouse_down = false
             end
         end
     end

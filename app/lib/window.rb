@@ -21,7 +21,8 @@ end
 module Engine
     class Window < Gosu::Window
         include Observable
-        attr_accessor :events, :entities
+        attr_accessor :events, :entities, :cursor
+
         def initialize(fullscreen)
             super(1024,768,fullscreen)
             @copyright = "ROGL by xrlabs - Dev Build"
@@ -30,9 +31,10 @@ module Engine
             self.caption = "ROGL - Ruby Open Game Layer [ by xrlabs ]"
             @col = Settings::BACKGROUND_FOG
             @entities = []
+            @map = []
+            @map << Player.new(self)
             @events = []
-            @cursor = Engine::GUI::Cursor.new(self,"assets/img/cursor.png","assets/img/cursor_highlight.png")
-            @entities.push()
+            @cursor = Engine::GUI::Cursor.new(self)
             @benchmark = true if ARGV.include?('--benchmark')
             @frame_count = 0
             @total_time = 0
@@ -50,15 +52,19 @@ module Engine
         def update
             @cursor.update
 
+            @map.each do |e|
+                e.update
+            end
+
             step = realtime do
                 def button_up(id)
                     case(id)
                         when Gosu::MsLeft
-                            @cursor.left_mouse_up
+                            @cursor.left_up
                         when Gosu::MsRight
-                            @cursor.right_mouse_up
+                            @cursor.right_up
                         when Gosu::MsMiddle
-                            @cursor.middle_mouse_up
+                            @cursor.middle_up
                     end
                 end
 
@@ -67,11 +73,11 @@ module Engine
                     notify_observers(id)
                     case(id)
                         when Gosu::MsLeft
-                            @cursor.left_mouse_down
+                            @cursor.left_down
                         when Gosu::MsRight
-                            @cursor.right_mouse_down
+                            @cursor.right_down
                         when Gosu::MsMiddle
-                            @cursor.middle_mouse_down
+                            @cursor.middle_down
                         when Gosu::KbE
                             Event.new {
                                 @entities.push(Engine::GUI::Base.new(20,20,200,200,@col))
@@ -102,34 +108,36 @@ module Engine
         
         def draw
             clear_screen
+
             draw_tiles
             @font.draw(($project_name ||= "Untitled Project"),16,16,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @font_small.draw(@copyright,(self.width * 0.5).to_i - (@font_small.text_width(@copyright, factor_x = 1) * 0.5) ,self.height - (@font_small.height * 1.5),1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @cursor.draw(self)
+
+            @map.each do |e|
+                e.draw
+            end
+
             @entities.each do |e|
                 # putv "Drawing #{e}"
                 e.draw(self)
             end
+
+            @font.draw("This is a Window",32,32,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
+            @font_small.draw(@copyright,(self.width * 0.5).to_i - (@font_small.text_width(@copyright, factor_x = 1) * 0.5) ,self.height - (@font_small.height * 1.5),1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
+            @cursor.draw(self)
         end
 
         def clear_screen
             self.draw_quad(
                 #1
-                @x,
-                @y,
-                Gosu::Color.argb(0x333333ff),
+                @x,@y,Gosu::Color.argb(0x333333ff),
                 #2
-                self.width,
-                @y,
-                Gosu::Color.argb(0x333333ff),
+                self.width,@y,Gosu::Color.argb(0x333333ff),
                 #3
-                @x,
-                self.height,
-                Gosu::Color.argb(0xff00ffff),
+                @x,self.height,Gosu::Color.argb(0xff00ffff),
                 #4
-                self.width,
-                self.height,
-                Gosu::Color.argb(0xff00ffff),
+                self.width,self.height,Gosu::Color.argb(0xff00ffff),
 
                 z = 0,
                 mode = :default
