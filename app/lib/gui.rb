@@ -1,4 +1,4 @@
-# require_all('./gui')
+# require_all('./gui/', message: 'Loading GUI Components')
 require './lib/gui/gui_base.rb'
 require './lib/gui/gui_button.rb'
 require './lib/gui/gui_window.rb'

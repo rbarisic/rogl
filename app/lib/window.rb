@@ -1,6 +1,5 @@
 require "observer"
 
-
 def realtime # :yield:
   r0 = Time.now
   yield
@@ -24,15 +23,13 @@ module Engine
         attr_accessor :events, :entities, :cursor
 
         def initialize(fullscreen)
-            super(1024,768,fullscreen)
+            super(480,320,fullscreen)
             @copyright = "ROGL by xrlabs - Dev Build"
             @x = 0
             @y = 0
             self.caption = "ROGL - Ruby Open Game Layer [ by xrlabs ]"
             @col = Settings::BACKGROUND_FOG
             @entities = []
-            @map = []
-            @map << Player.new(self)
             @events = []
             @cursor = Engine::GUI::Cursor.new(self)
             @benchmark = true if ARGV.include?('--benchmark')
@@ -51,10 +48,6 @@ module Engine
 
         def update
             @cursor.update
-
-            @map.each do |e|
-                e.update
-            end
 
             step = realtime do
                 def button_up(id)
@@ -112,20 +105,13 @@ module Engine
             draw_tiles
             @font.draw(($project_name ||= "Untitled Project"),16,16,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
             @font_small.draw(@copyright,(self.width * 0.5).to_i - (@font_small.text_width(@copyright, factor_x = 1) * 0.5) ,self.height - (@font_small.height * 1.5),1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
+            @font_small.draw("FPS: #{Gosu.fps}",$window.width - @font_small.text_width("FPS: #{Gosu.fps}") - 16,16, color = 0xffffffff)
             @cursor.draw(self)
-
-            @map.each do |e|
-                e.draw
-            end
 
             @entities.each do |e|
                 # putv "Drawing #{e}"
                 e.draw(self)
             end
-
-            @font.draw("This is a Window",32,32,1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
-            @font_small.draw(@copyright,(self.width * 0.5).to_i - (@font_small.text_width(@copyright, factor_x = 1) * 0.5) ,self.height - (@font_small.height * 1.5),1,factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
-            @cursor.draw(self)
         end
 
         def clear_screen
